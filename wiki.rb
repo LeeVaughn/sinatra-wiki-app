@@ -37,7 +37,6 @@ get("/:title/edit") do
   erb :edit
 end
 
-# {"title"=>"test", "content"=>"testing"}
 post("/create") do
   save_content(params["title"], params["content"])
   redirect(URI.escape("/#{params["title"]}"))
